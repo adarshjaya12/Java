@@ -15,11 +15,10 @@ public class Main {
         myLinkedList.add("San Palo");
         myLinkedList.add("Las Vegas");
         myLinkedList.add("Los Angles");
-        myLinkedList.add("Chicago");
-        myLinkedList.add("Chicago");
+        myLinkedList.add("Chennai");
+        myLinkedList.add("Dallas");
         printLinkedList(myLinkedList);
-        addInOrder(myLinkedList,"Denmark");
-        printLinkedList(myLinkedList);
+        visit(myLinkedList);
     }
 
     public static void printLinkedList(LinkedList<String> myLinkedList)
@@ -62,6 +61,7 @@ public class Main {
     {
         Scanner scanner = new Scanner(System.in);
         boolean quit = true;
+        boolean goingForward = true;
         ListIterator<String> myListIterator = cities.listIterator();
         if(cities.isEmpty())
         {
@@ -84,30 +84,60 @@ public class Main {
                     quit= true;
                     break;
                 case 1:
+                    /*if(!goingForward)
+                    {
+                        if(myListIterator.hasNext())
+                        {
+                            myListIterator.next();
+                        }
+                        goingForward = true;
+                    }*/
                     if(myListIterator.hasNext())
                     {
                         System.out.println("Now visiting "+myListIterator.next());
                         break;
-
                     }
                     else
                     {
-                        System.out.println("Last city in the list");
+                        System.out.println(myListIterator.previous()+" was the Last city in the list");
+                        goingForward = false;
                         break;
                     }
                 case 2:
+                    if(goingForward)
+                    {
+                        if(myListIterator.hasPrevious())
+                        {
+                            myListIterator.previous();
+                        }
+                        goingForward = false;
+                    }
                     if(myListIterator.hasPrevious())
                     {
                         myListIterator.previous();
                         System.out.println("Previous city is "+myListIterator.previous());
+                        break;
                     }
                     else
                     {
                         System.out.println("First City in the list");
+                        goingForward = true;
+                        break;
                     }
+                case 3:
+                    printMenu();
+                    break;
 
             }
         }
 
+    }
+    public static void printMenu()
+    {
+        System.out.println("Available actions : \n select");
+        System.out.println("0 - to Quit");
+        System.out.println("1 - go to next city");
+        System.out.println("2 - go to previous city");
+        System.out.println("3 - Print Menu");
     }
 }
