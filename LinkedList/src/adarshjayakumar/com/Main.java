@@ -114,7 +114,6 @@ public class Main {
                     }
                     if(myListIterator.hasPrevious())
                     {
-                        myListIterator.previous();
                         System.out.println("Previous city is "+myListIterator.previous());
                         break;
                     }
