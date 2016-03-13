@@ -79,8 +79,9 @@ public class Main {
                         if(listIterator.hasPrevious())
                         {
                             listIterator.previous();
-                            forward = false;
+
                         }
+                        forward = false;
                     }
                     if(listIterator.hasPrevious())
                     {
@@ -97,6 +98,7 @@ public class Main {
                     if(forward) {
                         if (listIterator.hasPrevious()) {
                             System.out.println("Now replaying " + listIterator.previous().getTitle());
+                            forward = false;
                             break;
                         } else {
                             System.out.println("We are at the start of the List");
