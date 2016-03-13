@@ -124,6 +124,18 @@ public class Main {
                 case 5:
                     printMenu();
                     break;
+                case 6:
+                    if(myPlaylist.size() >0)
+                    {
+                        listIterator.remove();
+                        if(listIterator.hasNext())
+                            System.out.println("Now Playing "+listIterator.next());
+                        else if(listIterator.hasPrevious())
+                            System.out.println("Now playing "+listIterator.previous());
+                    }
+                    else
+                        System.out.println("No more songs to delete");
+                    break;
             }
 
         }
@@ -139,6 +151,7 @@ public class Main {
         System.out.println("3 - toReplay the current song");
         System.out.println("4 - Display Song List");
         System.out.println("5 - print menu");
+        System.out.println("6 - Delete Current song");
     }
 
     private static void printList(LinkedList<Song> myPlaylist)
