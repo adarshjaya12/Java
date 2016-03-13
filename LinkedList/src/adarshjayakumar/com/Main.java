@@ -3,6 +3,7 @@ package adarshjayakumar.com;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.Scanner;
 
 public class Main {
 
@@ -19,7 +20,6 @@ public class Main {
         printLinkedList(myLinkedList);
         addInOrder(myLinkedList,"Denmark");
         printLinkedList(myLinkedList);
-
     }
 
     public static void printLinkedList(LinkedList<String> myLinkedList)
@@ -57,5 +57,57 @@ public class Main {
         }
         myListIterator.add(newCity);
         return true;
+    }
+    public  static void visit(LinkedList cities)
+    {
+        Scanner scanner = new Scanner(System.in);
+        boolean quit = true;
+        ListIterator<String> myListIterator = cities.listIterator();
+        if(cities.isEmpty())
+        {
+            System.out.println("No cities in the itenary");
+            return;
+        }
+        else {
+            System.out.println("Now visiting "+myListIterator.next());
+            printMenu();
+        }
+
+        while(quit)
+        {
+            int userValue = scanner.nextInt();
+            scanner.nextLine();
+            switch (userValue)
+            {
+                case 0:
+                    System.out.println("Holiday over");
+                    quit= true;
+                    break;
+                case 1:
+                    if(myListIterator.hasNext())
+                    {
+                        System.out.println("Now visiting "+myListIterator.next());
+                        break;
+
+                    }
+                    else
+                    {
+                        System.out.println("Last city in the list");
+                        break;
+                    }
+                case 2:
+                    if(myListIterator.hasPrevious())
+                    {
+                        myListIterator.previous();
+                        System.out.println("Previous city is "+myListIterator.previous());
+                    }
+                    else
+                    {
+                        System.out.println("First City in the list");
+                    }
+
+            }
+        }
+
     }
 }
