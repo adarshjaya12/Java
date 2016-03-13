@@ -8,8 +8,7 @@ import java.util.ArrayList;
 //Add a new Branch
 // Add a customer to that branch with initial transaction
 //Add a transaction for an existing customer for that branch
-    // Show a list opf customers for a particular branch and optionally a list
-    // of their transcations
+// Show a list of customers for a particular branch and optionally a list of their transcations
 
 public class Bank {
     private String bankName;
@@ -25,9 +24,18 @@ public class Bank {
         if(findBranch(bankLocation) == null)
         {
             this.myBranchArray.add(new Branch(bankLocation));
+            System.out.println("branch Added");
             return true;
         }
     return false;
+    }
+
+    public void printBranch()
+    {
+        for(int i=0; i<myBranchArray.size();i++)
+        {
+            System.out.println(myBranchArray.get(i).getBranchCity());
+        }
     }
 
     private Branch findBranch(String branchName)
@@ -47,8 +55,49 @@ public class Bank {
         Branch branch = findBranch(branchName);
         if(branch != null)
         {
+            System.out.println("Account Created");
             return branch.createNewAccount(branchName,customerName,initialAmount);
         }
         return false;
     }
+    public boolean addTransaction(String branchName,String customerName,double transactionAmount)
+    {
+        Branch exisitingBranch = findBranch(branchName);
+        if(exisitingBranch!= null)
+        {
+            exisitingBranch.creditAccount(customerName,transactionAmount);
+            return true;
+        }
+        return false;
+    }
+    public void printTransactionDetails(String branchName)
+    {
+        ArrayList<Branch> newBranchArray = new ArrayList<Branch>();
+        for(int i=0 ; i <myBranchArray.size();i++)
+        {
+            if(myBranchArray.get(i).getBranchCity().equals(branchName))
+            {
+                newBranchArray.add(myBranchArray.get(i));
+
+            }
+        }
+
+        for(int i=0 ; i < newBranchArray.size() ; i++)
+        {
+            System.out.println(newBranchArray.get(i).getBranchCity());
+            System.out.println(newBranchArray.get(i).getMyCustomer().get(i).getCustomerName());
+            System.out.println(newBranchArray.get(i).getMyCustomer().get(i).getCustomerTransaction().get(i).doubleValue());
+        }
+
+    }
+    public  void dummyPrint()
+    {
+        for(int i=0 ; i < myBranchArray.size();i++)
+        {
+            System.out.println(myBranchArray.get(i).getBranchCity());
+            System.out.println(myBranchArray.get(i).getMyCustomer().get(i).getCustomerName());
+            System.out.println(myBranchArray.get(i).getMyCustomer().get(i).getCustomerTransaction().get(i).doubleValue());
+        }
+    }
+
 }

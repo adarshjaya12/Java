@@ -24,4 +24,7 @@ public class Customers {
         this.customerTransaction.add(amount);
     }
 
+    public ArrayList<Double> getCustomerTransaction() {
+        return customerTransaction;
+    }
 }

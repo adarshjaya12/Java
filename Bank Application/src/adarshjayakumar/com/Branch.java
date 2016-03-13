@@ -53,4 +53,8 @@ public class Branch {
     public String getBranchCity() {
         return branchCity;
     }
+
+    public ArrayList<Customers> getMyCustomer() {
+        return myCustomer;
+    }
 }
