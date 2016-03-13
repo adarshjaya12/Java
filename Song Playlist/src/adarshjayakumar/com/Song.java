@@ -12,8 +12,14 @@ public class Song {
         this.duration = duration;
     }
     public String getTitle() {
-        return title;
+        return this.title;
     }
+
+    @Override
+    public String toString() {
+        return this.title + " : " + this.getTitle();
+    }
+
     public double getDuration() {
         return duration;
     }
