@@ -81,17 +81,17 @@ public class Main {
             {
                 case 0:
                     System.out.println("Holiday over");
-                    quit= true;
+                    quit= false;
                     break;
                 case 1:
-                    /*if(!goingForward)
+                   if(!goingForward)
                     {
                         if(myListIterator.hasNext())
                         {
                             myListIterator.next();
                         }
                         goingForward = true;
-                    }*/
+                    }
                     if(myListIterator.hasNext())
                     {
                         System.out.println("Now visiting "+myListIterator.next());
