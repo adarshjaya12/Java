@@ -147,18 +147,15 @@ public class Main {
         System.out.println("========================");
         for(int i=0;i <myPlaylist.size();i++)
         {
-            System.out.println("Song :"+myPlaylist.get(i).getTitle()+" Duration :"+
+            System.out.println("Song : "+myPlaylist.get(i).getTitle()+" Duration : "+
                     myPlaylist.get(i).getDuration());
         }
         System.out.println("========================");
 //        ListIterator<Song> mylist = myPlaylist.listIterator();
 //        Iterator<Song> mylist = myPlaylist.iterator();
-
 //        while(mylist.hasNext())
-
 //            System.out.println("Song Name :"+mylist.next().getTitle()+" Duration :"+
 //                    mylist.v);
-
 
     }
 }
