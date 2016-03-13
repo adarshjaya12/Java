@@ -61,7 +61,7 @@ public class Albums {
             playList.add(song);
             return true;
         }
-        System.out.println("The song" +title+ " is not in this album");
+        System.out.println("The song " +title+ " is not in this album");
         return false;
 
     }
