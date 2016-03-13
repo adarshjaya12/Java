@@ -20,7 +20,7 @@ public class Albums {
 
     public void addSongs(String songName , double songDuration)
     {
-        if(findSong(songName) == null)
+        if(findSongs(songName) == null)
         {
             this.albumSongs.add(new Song(songName,songDuration));
 
@@ -31,12 +31,26 @@ public class Albums {
         }
     }
 
-    private Song findSong(String songName)
+   /* private Song findSong(String songName)
     {
         for(Song checkedSong : this.albumSongs)
         {
             if(checkedSong.getTitle().equals(songName))
                 return checkedSong;
+        }
+        return null;
+    }
+*/
+    private Song findSongs(String songName)
+    {
+        Song myExsitingSong;
+        for(int i=0 ; i<albumSongs.size();i++)
+        {
+            if(albumSongs.get(i).getTitle() == songName)
+            {
+                myExsitingSong = albumSongs.get(i);
+                return myExsitingSong;
+            }
         }
         return null;
     }
@@ -55,7 +69,7 @@ public class Albums {
 
     public boolean addToPlaylist(String title, LinkedList<Song> playList)
     {
-        Song song = findSong(title);
+        Song song = findSongs(title);
         if(song != null)
         {
             playList.add(song);
@@ -64,13 +78,5 @@ public class Albums {
         System.out.println("The song " +title+ " is not in this album");
         return false;
 
-    }
-
-    public String getAlbumName() {
-        return this.albumName;
-    }
-
-    public ArrayList<Song> getAlbumSongs() {
-        return this.albumSongs;
     }
 }

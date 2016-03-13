@@ -27,14 +27,13 @@ public class Main {
         albums.get(1).addToPlaylist("Somewhere I belong",playlist);
         albums.get(1).addToPlaylist("What I have done",playlist);
         albums.get(0).addToPlaylist(4,playlist);
-
         playList(playlist);
 
     }
     public static void playList(LinkedList<Song> myPlaylist)
     {
         Scanner scanner = new Scanner(System.in);
-        boolean quit = false;
+        boolean quit = true;
         boolean forward = true;
         ListIterator<Song> listIterator = myPlaylist.listIterator();
         if(myPlaylist.size() == 0)
@@ -42,13 +41,10 @@ public class Main {
             System.out.println("There is nothing in the playlist");
             return;
         }
-        else if(myPlaylist.size() > 0)
-        {
-            System.out.println("Now playing "+listIterator.next().toString());
-        }
-
+    printMenu();
         while(quit)
         {
+            System.out.println("Enter value for the Menu");
             int uservalue = scanner.nextInt();
             scanner.nextLine();
             switch (uservalue)
@@ -69,11 +65,13 @@ public class Main {
                     if(listIterator.hasNext())
                     {
                         System.out.println("Now Playing "+listIterator.next().getTitle());
+                        break;
                     }
                     else
                     {
                         System.out.println(" We have reached the end of the playlist");
                         forward = false;
+                        break;
                     }
                 case 2:
                     if(forward)
@@ -87,19 +85,22 @@ public class Main {
                     if(listIterator.hasPrevious())
                     {
                         System.out.println("Now playing previous "+listIterator.previous().getTitle());
-
+                        break;
                     }
                     else
                     {
                         System.out.println("You have reached the first song in the list");
                         forward = true;
+                        break;
                     }
                 case 3:
                     if(forward) {
                         if (listIterator.hasPrevious()) {
                             System.out.println("Now replaying " + listIterator.previous().getTitle());
+                            break;
                         } else {
                             System.out.println("We are at the start of the List");
+                            break;
                         }
                     }
                     else{
@@ -107,13 +108,15 @@ public class Main {
                         {
                             System.out.println("Now replaying "+listIterator.next().getTitle());
                             forward = true;
+                            break;
                         }
                         else
                         {
                             System.out.println("we have reached the end of the list");
+                            break;
                         }
                     }
-                    break;
+
 
                 case 4:
                     printList(myPlaylist);
@@ -125,6 +128,7 @@ public class Main {
 
         }
     }
+
     private static void printMenu()
     {
         System.out.println("Playlist Menu \n Choose one");
@@ -139,17 +143,22 @@ public class Main {
 
     private static void printList(LinkedList<Song> myPlaylist)
     {
-        //ListIterator<Song> myList = myPlaylist.listIterator()
-        Iterator<Song> mylist = myPlaylist.iterator();
         System.out.println("Playlist Song Details : ");
         System.out.println("========================");
-        while(mylist.hasNext())
-            System.out.println(mylist.next().getTitle()+ " has duration "+mylist.next().getDuration());
+        for(int i=0;i <myPlaylist.size();i++)
+        {
+            System.out.println("Song :"+myPlaylist.get(i).getTitle()+" Duration :"+
+                    myPlaylist.get(i).getDuration());
+        }
         System.out.println("========================");
+//        ListIterator<Song> mylist = myPlaylist.listIterator();
+//        Iterator<Song> mylist = myPlaylist.iterator();
+
+//        while(mylist.hasNext())
+
+//            System.out.println("Song Name :"+mylist.next().getTitle()+" Duration :"+
+//                    mylist.v);
+
+
     }
-
-
-
-
-
 }
