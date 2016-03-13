@@ -29,6 +29,16 @@ public class Bank {
         }
     return false;
     }
+    public boolean addCustomer(String branchName,String customerName, double initialAmount)
+    {
+        Branch branch = findBranch(branchName);
+        if(branch != null)
+        {
+            System.out.println("Account Created");
+            return branch.createNewAccount(branchName,customerName,initialAmount);
+        }
+        return false;
+    }
 
     public void printBranch()
     {
@@ -50,16 +60,7 @@ public class Bank {
         }
         return null;
     }
-    public boolean addCustomer(String branchName,String customerName, double initialAmount)
-    {
-        Branch branch = findBranch(branchName);
-        if(branch != null)
-        {
-            System.out.println("Account Created");
-            return branch.createNewAccount(branchName,customerName,initialAmount);
-        }
-        return false;
-    }
+
     public boolean addTransaction(String branchName,String customerName,double transactionAmount)
     {
         Branch exisitingBranch = findBranch(branchName);
@@ -96,7 +97,7 @@ public class Bank {
         {
             System.out.println(myBranchArray.get(i).getBranchCity());
             System.out.println(myBranchArray.get(i).getMyCustomer().get(i).getCustomerName());
-            System.out.println(myBranchArray.get(i).getMyCustomer().get(i).getCustomerTransaction().get(i).doubleValue());
+            //System.out.println(myBranchArray.get(i).getMyCustomer().get(i).getCustomerTransaction().get(i).doubleValue());
         }
     }
 
