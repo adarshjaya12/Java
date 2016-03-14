@@ -5,13 +5,13 @@ import java.util.ArrayList;
 /**
  * Created by adarsh on 3/14/2016.
  */
-public class Team {
+public class Team <T>{
     private String teamName;
     private int gamesPlayed = 0;
     private int won = 0;
     private int lost = 0;
     private int tied = 0;
-    ArrayList<Player> addPlayers;
+    ArrayList<T> addPlayers;
     public Team(String teamName) {
         this.teamName = teamName;
         this.addPlayers = new ArrayList<>();
@@ -22,7 +22,7 @@ public class Team {
     {
         return addPlayers.size();
     }
-    public boolean addPlayer(Player player)
+    public boolean addPlayer(T player)
     {
         if(addPlayers.contains(player))
         {
