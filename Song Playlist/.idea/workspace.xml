@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ee142bd-1f2b-4ae7-9dc3-dac2a6244f35" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SongPlayList-InnerClass/SongPlayList-InnerClass.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SongPlayList-InnerClass/src/adarshjayakumar/com/Albums.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SongPlayList-InnerClass/src/adarshjayakumar/com/Song.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../simpleInterface/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../simpleInterface/src/adarshjayakumar/com/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../simpleInterface/src/adarshjayakumar/com/SInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Interface/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Interface/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../LinkedList/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../LinkedList/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SongPlayList-InnerClass/src/adarshjayakumar/com/Albums.java" afterPath="$PROJECT_DIR$/../SongPlayList-InnerClass/src/adarshjayakumar/com/Albums.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SongPlayList-InnerClass/src/adarshjayakumar/com/Main.java" afterPath="$PROJECT_DIR$/../SongPlayList-InnerClass/src/adarshjayakumar/com/Main.java" />
     </list>
     <ignored path="Song Playlist.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +29,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/adarshjayakumar/com/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7647059">
-              <caret line="174" column="5" selection-start-line="32" selection-start-column="2" selection-end-line="174" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.7352941">
+              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -669,15 +663,15 @@
       <updated>1457853914409</updated>
       <workItem from="1457853915644" duration="10781000" />
       <workItem from="1457911033017" duration="510000" />
-      <workItem from="1457920584094" duration="108000" />
+      <workItem from="1457920584094" duration="696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11399000" />
+    <option name="totallyTimeSpent" value="11987000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -790,8 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/adarshjayakumar/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7647059">
-          <caret line="174" column="5" selection-start-line="32" selection-start-column="2" selection-end-line="174" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.7352941">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding />
         </state>
       </provider>

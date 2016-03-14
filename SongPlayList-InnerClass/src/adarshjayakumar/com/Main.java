@@ -15,6 +15,7 @@ public class Main {
         justinBeiber.addSongs("Love Yourself",3.53);
         justinBeiber.addSongs("Mark my Words",2.14);
         albums.add(justinBeiber);
+
         Albums linkinPark = new Albums("meteora","Linkin Park");
         linkinPark.addSongs("Breaking the habbit",3.56);
         linkinPark.addSongs("Faint",3.36);
@@ -27,7 +28,6 @@ public class Main {
         albums.get(1).addToPlaylist("Faint",playlist);
         albums.get(1).addToPlaylist("Somewhere I belong",playlist);
         albums.get(1).addToPlaylist("What I have done",playlist);
-        albums.get(0).addToPlaylist(4,playlist);
         playList(playlist);
     }
     public static void playList(LinkedList<Song> myPlaylist)
