@@ -13,13 +13,25 @@ public class Main {
         chennai.addPlayer(TonyShark);
         chennai.addPlayer(VinDuo);
         System.out.println(chennai.teamSize());
+        
         SoccerPlayer hererra = new SoccerPlayer("Hererra");
-        Team<SoccerPlayer> mySoccerTeam = new Team<>("Manchester United");
-        System.out.println(chennai.teamSize());
+        Team<SoccerPlayer> manUtd = new Team<>("Manchester United");
+        Team<SoccerPlayer> rmfc = new Team<>("Real Madrid");
+        Team<SoccerPlayer> fcb = new Team<>("Barcelona");
+        Team<SoccerPlayer> chelsea = new Team<>("Chelsea");
+        manUtd.matchResult(rmfc,3,1);
+        manUtd.matchResult(chelsea,6,1);
+        rmfc.matchResult(fcb,10,1);
+        chelsea.matchResult(rmfc,1,11);
+        System.out.println(manUtd.getTeamName()+" : "+manUtd.result());
+        System.out.println(rmfc.getTeamName()+" : "+rmfc.result());
+        System.out.println(chelsea.getTeamName()+" : "+chelsea.result());
+        System.out.println(fcb.getTeamName()+" : "+fcb.result());
+
         Team<CricketPlayer> myCricketTeam = new Team<>("Rajkot Lions");
         CricketPlayer raina = new CricketPlayer("Suresh Raina");
         myCricketTeam.addPlayer(raina);
-        
+
 
     }
 }
