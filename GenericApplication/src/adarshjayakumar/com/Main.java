@@ -3,7 +3,7 @@ package adarshjayakumar.com;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
         LeagueTable <Team<SoccerPlayer>> epl = new LeagueTable<>("English Premium League");
         Team<SoccerPlayer> manchesterUnited = new Team<>("Manchester United");
         Team<SoccerPlayer> chelsea = new Team<>("Chelsea");
@@ -20,8 +20,6 @@ public class Main {
         manchesterUnited.addPlayer(unitedPlayer3);
         manchesterUnited.addPlayer(unitedPlayer4);
         manchesterUnited.addPlayer(unitedPlayer5);
-
-        //SoccerPlayer  = new SoccerPlayer("");
 
         SoccerPlayer chelseaPlayer1 = new SoccerPlayer("Costa");
         SoccerPlayer chelseaPlayer2 = new SoccerPlayer("Fabregas");
@@ -75,29 +73,6 @@ public class Main {
 
         manchesterCity.matchResult(liverpool,1,2);
         manchesterCity.matchResult(liverpool,2,2);
-
-        /*chelsea.matchResult(manchesterCity,3,1);
-        chelsea.matchResult(manchesterUnited,4,3);
-        chelsea.matchResult(liverpool,2,1);
-        chelsea.matchResult(manchesterCity,5,3);
-        chelsea.matchResult(manchesterUnited,7,1);
-        chelsea.matchResult(liverpool,2,2);
-
-        manchesterUnited.matchResult(manchesterCity,3,1);
-        manchesterUnited.matchResult(chelsea,4,3);
-        manchesterUnited.matchResult(liverpool,2,1);
-        manchesterUnited.matchResult(manchesterCity,5,3);
-        manchesterUnited.matchResult(chelsea,7,1);
-        manchesterUnited.matchResult(liverpool,2,2);
-
-        manchesterUnited.matchResult(manchesterCity,3,1);
-        manchesterUnited.matchResult(chelsea,4,3);
-        manchesterUnited.matchResult(liverpool,2,1);
-        manchesterUnited.matchResult(manchesterCity,5,3);
-        manchesterUnited.matchResult(chelsea,7,1);
-        manchesterUnited.matchResult(liverpool,2,2);*/
-
-
 
         epl.addTeam(manchesterUnited);
         epl.addTeam(chelsea);
@@ -167,7 +142,6 @@ public class Main {
         kxip.matchResult(mi,0,1);
         rcb.matchResult(mi,1,0);
         rcb.matchResult(mi,0,1);
-
 
         ipl.addTeam(csk);
         ipl.addTeam(kxip);
