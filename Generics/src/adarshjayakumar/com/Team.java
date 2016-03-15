@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by adarsh on 3/14/2016.
  */
-public class Team <T extends Player>{
+public class Team <T extends Player> implements Comparable<Team<T>> {
     private String teamName;
     private int gamesPlayed = 0;
     private int won = 0;
@@ -68,6 +68,17 @@ public class Team <T extends Player>{
     public int result()
     {
         return (won*2)+tied;
+    }
+
+    @Override
+    public int compareTo(Team<T> team) {
+        if(this.result() > team.result())
+            return -1;
+        else if(this.result() < team.result())
+            return 1;
+        else
+            return 0;
+
     }
 }
 
