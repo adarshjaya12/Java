@@ -55,6 +55,5 @@ class Main
         Main menu = new Main(userName);
         arrayList.add(menu);
         System.out.println("Thank You");
-
     }
 }

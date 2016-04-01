@@ -29,7 +29,19 @@ public class Operation {
     }
     public void removeBudget()
     {
-
+        String title;
+        int indexNumber;
+        System.out.println("Enter the Title to be removed");
+        title = scanner.next();
+        indexNumber = findId(title);
+        if(indexNumber != 0)
+        {
+            myArrayList.remove(indexNumber);
+        }
+        else
+        {
+            System.out.println("Not found");
+        }
     }
     public void editBudget()
     {
@@ -37,10 +49,20 @@ public class Operation {
     }
     public void displayBudget()
     {
-        for(int i=0; i < myArrayList.size(); i++)
+        for(Budget g: myArrayList)
+            System.out.println("Title :"+g.getTitle()+"\nDate : "+g.getDate());
+    }
+
+    private int findId(String findTitle)
+    {
+        for(int i=0; i<myArrayList.size();i++)
         {
-            System.out.println("Title : "+myArrayList.get(i).getTitle()+"\nDate: "+myArrayList.get(i).getDate());
+            if(myArrayList.get(i).getTitle().matches(findTitle))
+            {
+                return i;
+            }
         }
+        return 0;
     }
 
 }
