@@ -34,7 +34,7 @@ public class Operation {
         System.out.println("Enter the Title to be removed");
         title = scanner.next();
         indexNumber = findId(title);
-        if(indexNumber != 0)
+        if(indexNumber >= 0)
         {
             myArrayList.remove(indexNumber);
         }
@@ -55,14 +55,15 @@ public class Operation {
 
     private int findId(String findTitle)
     {
-        for(int i=0; i<myArrayList.size();i++)
+        for(int i=0; i<myArrayList.size()-1;i++)
         {
-            if(myArrayList.get(i).getTitle().matches(findTitle))
+            System.out.println(myArrayList.size());
+            if(myArrayList.get(i).getTitle().contains(findTitle))
             {
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
 
 }
